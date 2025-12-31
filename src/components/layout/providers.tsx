@@ -1,6 +1,6 @@
 "use client";
 
-import { ThemeProvider } from "next-themes";
+// import { ThemeProvider } from "next-themes";
 import { usePathname } from "next/navigation";
 import { createContext, useState } from "react";
 import { CookieContextProvider } from "@/components/cookies/cookie-context";
@@ -26,14 +26,15 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <AppContext.Provider value={{ previousPathname: previousPathname ?? undefined }}>
       <CookieContextProvider>
-        <ThemeProvider
+        {children}
+        {/*<ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
           {children}
-        </ThemeProvider>
+        </ThemeProvider>*/}
       </CookieContextProvider>
     </AppContext.Provider>
   );

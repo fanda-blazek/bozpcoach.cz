@@ -1,9 +1,9 @@
 export const site = {
-  name: "GTDN",
-  defaultTitle: "Next.js Starter Template",
+  name: "BOZP Coach",
+  defaultTitle: "BOZP Coach: Bezpečnost práce skrze psychologii | Nikola Hošková",
   defaultDescription:
-    "Modern web application starter template built with Next.js 16, TypeScript, shadcn/ui and with a lot of built-in features.",
-  domain: "gtdn.online",
-  url: "https://www.gtdn.online",
-  locale: "en",
+    "Máte papíry v pořádku, ale úrazy se stále dějí? Nikola Hošková (OZO) propojuje bezpečnost práce s psychologií. Změňte myšlení lidí a budujte Safety Leadership.",
+  domain: "bozpcoach.cz",
+  url: "https://www.bozpcoach.cz",
+  locale: "cs",
 };

@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Bricolage_Grotesque } from "next/font/google";
 import { Suspense } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { Providers } from "@/components/layout/providers";
@@ -15,6 +15,11 @@ import { site } from "@/config/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const bricolageGrotesque = Bricolage_Grotesque({
+  variable: "--font-bricolage-grotesque",
   subsets: ["latin"],
 });
 
@@ -76,7 +81,7 @@ export default function RootLayout({
     <html
       lang={site.locale}
       suppressHydrationWarning
-      className={`scroll-pt-16 scroll-smooth ${geistSans.variable} ${geistMono.variable}`}
+      className={`scroll-pt-16 scroll-smooth ${geistSans.variable} ${bricolageGrotesque.variable} ${geistMono.variable}`}
     >
       <body className="font-sans antialiased">
         <Providers>

@@ -14,7 +14,7 @@ import { Link } from "@/components/ui//link";
 import { Container } from "@/components/ui/container";
 import { MenuIcon, ChevronDownIcon, ChevronRightIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Logo } from "@/components/ui/logo";
+import { LogoBozpCoach } from "@/components/ui/logo";
 import { NavLink } from "@/components/layout/nav-link";
 import {
   DropdownMenu,
@@ -144,7 +144,7 @@ export function Header({
   return (
     <FloatingBar
       asChild
-      position={"sticky"}
+      position={"fixed"}
       autoHide={true}
       className={clsx(
         // Base styles for the navbar
@@ -152,9 +152,9 @@ export function Header({
         // Transition and initial state
         "transform-gpu transition duration-300",
         // Initial state
-        "bg-background/75 border-b border-transparent backdrop-blur-2xl",
+        "border-b border-transparent bg-transparent",
         // Scrolled state - when the user starts scrolling
-        "data-scrolled:border-border",
+        "data-scrolled:border-border data-scrolled:bg-background/75 data-scrolled:backdrop-blur-2xl",
         // Hidden state for auto-hide behavior
         "data-hidden:data-scrolled:shadow-none data-hidden:motion-safe:-translate-y-full"
       )}
@@ -167,7 +167,7 @@ export function Header({
           {/* Left side */}
           <div className="flex flex-1 items-center gap-4">
             <Link href="/" aria-label="Home Page">
-              <Logo aria-hidden="true" className="w-20" />
+              <LogoBozpCoach />
             </Link>
           </div>
 

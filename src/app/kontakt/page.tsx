@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 import { contact, formatPhoneNumber } from "@/config/contact";
 import { site } from "@/config/site";
 
-const title = "Contact";
+const title = "Kontakt";
 const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 
 export const metadata: Metadata = {

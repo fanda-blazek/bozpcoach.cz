@@ -8,7 +8,7 @@ const containerVariants = cva("mx-auto w-[min(var(--container-max-width),100%---
   variants: {
     size: {
       sm: "[--container-max-width:48rem]",
-      default: "[--container-max-width:64rem]",
+      default: "[--container-max-width:76rem]",
       lg: "[--container-max-width:92rem]",
       prose: "[--container-max-width:65ch]",
       fluid: "[--container-max-width:100%]",

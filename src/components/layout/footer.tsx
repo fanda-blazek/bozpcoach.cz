@@ -1,9 +1,9 @@
 import { Link } from "@/components/ui/link";
-import { Logo } from "@/components/ui/logo";
+import { LogoBozpCoach } from "@/components/ui/logo";
 import { ArrowUpIcon, ChevronDownIcon } from "lucide-react";
 import { NavLink } from "@/components/layout/nav-link";
 import { Container } from "@/components/ui/container";
-import { ThemeSwitcher } from "./theme-switcher";
+// import { ThemeSwitcher } from "./theme-switcher";
 import { SocialMediaIcons } from "./social-media-icons";
 import { type NavigationItem, type NavigationDropdown, navLinksArray } from "@/config/nav-links";
 import { Separator } from "../ui/separator";
@@ -73,11 +73,11 @@ export function Footer(props: React.ComponentProps<"footer">) {
           {/* Brand section */}
           <div className="flex flex-col items-start justify-start gap-7">
             <Link href="/" aria-label="Home Page">
-              <Logo aria-hidden="true" className="w-20" />
+              <LogoBozpCoach />
             </Link>
             <p className="text-sm">{site.defaultTitle}</p>
             <Separator />
-            <ThemeSwitcher />
+            {/*<ThemeSwitcher />*/}
           </div>
 
           <div className="grid gap-y-16 sm:grid-cols-2 md:grid-cols-3 lg:col-span-2">

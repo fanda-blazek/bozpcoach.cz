@@ -1,4 +1,6 @@
-export function Logo(props: React.ComponentProps<"svg">) {
+import { cn } from "@/lib/utils";
+
+export function LogoGtdnSvg(props: React.ComponentProps<"svg">) {
   return (
     <svg {...props} viewBox="0 0 489 101" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -18,5 +20,13 @@ export function Logo(props: React.ComponentProps<"svg">) {
         fill="currentColor"
       />
     </svg>
+  );
+}
+
+export function LogoBozpCoach(props: React.ComponentProps<"p">) {
+  return (
+    <p {...props} className={cn("font-display text-2xl/[100%] font-bold", props.className)}>
+      BOZP Coach
+    </p>
   );
 }

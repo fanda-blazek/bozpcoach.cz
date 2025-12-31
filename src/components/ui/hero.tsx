@@ -82,7 +82,11 @@ function HeroContent({ size = "default", className, asChild = false, ...props }:
   return (
     <Comp
       size={size}
-      className={cn(containerVariants({ size }), "relative z-10 py-12 sm:py-20", className)}
+      className={cn(
+        containerVariants({ size }),
+        "relative z-10 pt-[calc(var(--navbar-height)+3rem)] pb-12 sm:pt-[calc(var(--navbar-height)+5rem)] sm:pb-20",
+        className
+      )}
       {...props}
     />
   );
@@ -100,7 +104,7 @@ function HeroTitle({
   return (
     <Comp
       className={cn(
-        "text-foreground mt-3 text-center text-3xl/[110%] font-semibold tracking-tight text-pretty sm:text-4xl/[110%] sm:leading-none lg:text-5xl/[110%]",
+        "text-foreground font-display mt-3 text-center text-3xl/[110%] font-bold tracking-tight text-pretty sm:text-4xl/[110%] sm:leading-none lg:text-5xl/[110%]",
         className
       )}
       {...props}

@@ -1,4 +1,3 @@
-import { legalLinksArray } from "./legal-links";
 import type { Route } from "next";
 
 export type NavigationLink<T extends string = string> = {
@@ -15,16 +14,20 @@ export type NavigationItem = NavigationLink | NavigationDropdown;
 
 export const navLinks = {
   home: {
-    name: "Home",
+    name: "Hlavní strana",
     href: "/",
   },
-  legalLinks: {
-    name: "Legal links",
-    items: [...legalLinksArray],
+  services: {
+    name: "Služby",
+    href: "/#sluzby",
+  },
+  about: {
+    name: "O mně",
+    href: "/#o-mne",
   },
   contact: {
-    name: "Contact",
-    href: "/contact",
+    name: "Kontakt",
+    href: "/kontakt",
   },
 } as const satisfies Record<string, NavigationItem>;
 
