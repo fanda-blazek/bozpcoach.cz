@@ -17,10 +17,10 @@ import { cn } from "@/lib/utils";
 
 const newsletterFormSchema = z.object({
   "newsletter-email": z.email({
-    message: "Please enter a valid email address.",
+    message: "Prosím zadejte platnou emailovou adresu.",
   }),
   turnstileToken: z.string().min(1, {
-    message: "Please complete verification.",
+    message: "Prosím potvrďte, že nejste robot.",
   }),
 });
 
@@ -63,20 +63,21 @@ export function NewsletterForm({ className, ...props }: React.ComponentProps<"di
         if (response.ok) {
           setSubmitStatus({
             type: "success",
-            message: data.message || "Successfully subscribed to newsletter!",
+            message: data.message || "Úspěšně jste se přihlásil k odběru newsletteru!",
           });
           form.reset();
           turnstileRef.current?.reset();
         } else {
           setSubmitStatus({
             type: "error",
-            message: data.error || "An error occurred while subscribing to newsletter.",
+            message:
+              data.error || "Nastala chyba při přihlašování k odběru. Zkuste to prosím později.",
           });
         }
       } catch {
         setSubmitStatus({
           type: "error",
-          message: "An error occurred during subscription. Please try again later.",
+          message: "Nastala chyba při přihlašování k odběru. Zkuste to prosím později.",
         });
       } finally {
         setIsSubmitting(false);
@@ -99,7 +100,7 @@ export function NewsletterForm({ className, ...props }: React.ComponentProps<"di
                 const isInvalid = field.state.meta.isTouched && !field.state.meta.isValid;
                 return (
                   <Field data-invalid={isInvalid} className="w-full">
-                    <FieldLabel htmlFor={field.name}>Email address *</FieldLabel>
+                    <FieldLabel htmlFor={field.name}>Emailová adresa *</FieldLabel>
                     <Input
                       id={field.name}
                       name={field.name}
@@ -108,7 +109,7 @@ export function NewsletterForm({ className, ...props }: React.ComponentProps<"di
                       onBlur={field.handleBlur}
                       onChange={(e) => field.handleChange(e.target.value)}
                       aria-invalid={isInvalid}
-                      placeholder="your-email@example.com"
+                      placeholder="váš@email.cz"
                     />
                     {isInvalid && <FieldError errors={field.state.meta.errors} />}
                   </Field>
@@ -123,14 +124,14 @@ export function NewsletterForm({ className, ...props }: React.ComponentProps<"di
           </div>
 
           <p className="text-muted-foreground text-sm">
-            By clicking Subscribe you agree to receive our newsletter. You can unsubscribe at any
-            time. Learn more in our{" "}
+            Kliknutím na tlačítko Odebírat souhlasíte se zasíláním našeho newsletteru. Odhlásit se
+            můžete kdykoliv. Více informací naleznete v našich zásadách ochrany osobních údajů.{" "}
             <Link
               href={legalLinks.gdpr.href}
               target="_blank"
               className="underline hover:no-underline"
             >
-              privacy policy.
+              osobních údajů.
             </Link>{" "}
           </p>
 

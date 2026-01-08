@@ -10,19 +10,18 @@ export function NewsletterCta(props: React.ComponentProps<"div">) {
         {/* Badge */}
         <Badge>
           <MailIcon />
-          Stay Informed
+          Zůstaňte informovaný
         </Badge>
 
         {/* Heading */}
         <h4 className="mt-4 text-2xl font-semibold tracking-tight md:text-center md:text-3xl xl:text-4xl">
-          Subscribe to our newsletter
+          Přihlaste se k odběru našeho newsletteru
         </h4>
 
         {/* Description */}
         <p className="text-muted-foreground mt-2 text-lg font-medium md:text-center xl:text-xl">
-          Get the <span className="text-primary">latest updates</span>,{" "}
-          <span className="text-primary">tips</span>, and{" "}
-          <span className="text-primary">exclusive</span> offers from AlignUI.
+          Získejte <span className="text-primary">nejnovější informace</span> a{" "}
+          <span className="text-primary">exkluzivní</span> nabídky na školení BOZP.
         </p>
 
         {/* Form */}
@@ -36,15 +35,15 @@ export function NewsletterCta(props: React.ComponentProps<"div">) {
         <div className="mt-5 flex flex-wrap gap-4 md:justify-center xl:mt-8 xl:gap-7">
           <div className="flex items-center gap-2 text-sm xl:text-base">
             <CheckCircle className="h-4 w-4 text-green-500" />
-            Weekly updates
+            Novinky každý týden
           </div>
           <div className="flex items-center gap-2 text-sm xl:text-base">
             <CheckCircle className="h-4 w-4 text-green-500" />
-            Exclusive content
+            Exkluzivní nabídky na školení
           </div>
           <div className="flex items-center gap-2 text-sm xl:text-base">
             <CheckCircle className="h-4 w-4 text-green-500" />
-            Early access for features
+            Žádný spam, odhlášení kdykoliv
           </div>
         </div>
       </div>

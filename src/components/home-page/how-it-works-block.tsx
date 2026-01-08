@@ -9,21 +9,21 @@ interface DataItem {
 const DATA: DataItem[] = [
   {
     icon: <CloudIcon strokeWidth={1.5} className="size-12" aria-hidden="true" />,
-    title: "AI-Driven Insights",
+    title: "Nultá hodina (Strategie & Cíle)",
     description:
-      "Leverage advanced AI algorithms to gain actionable insights and make data-driven decisions for your business.",
+      "Na začátku si ujasníme, co přesně vás v práci trápí. Nastavíme si reálné cíle a vytvoříme plán na míru vaší povaze.",
   },
   {
     icon: <XCircleIcon strokeWidth={1.5} className="size-12" aria-hidden="true" />,
-    title: "Error-Free Automation",
+    title: "Představení metod",
     description:
-      "Eliminate manual errors with intelligent automation tools that ensure accuracy and consistency across all processes.",
+      "Ukážu vám konkrétní nástroje z psychologie a koučinku (metoda GROW, techniky zpětné vazby), které fungují v praxi BOZP.",
   },
   {
     icon: <UsersIcon strokeWidth={1.5} className="size-12" aria-hidden="true" />,
-    title: "Seamless Team Collaboration",
+    title: "Trénink a zkoušení",
     description:
-      "Enhance teamwork with AI-powered collaboration tools that enable real-time communication and shared workflows.",
+      "Žádná suchá teorie. Všechny metody si společně vyzkoušíme na modelových situacích z vašeho provozu. Získáte jistotu ještě předtím, než půjdete před lidi.",
   },
 ];
 
