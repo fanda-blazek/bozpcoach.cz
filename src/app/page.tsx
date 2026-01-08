@@ -22,6 +22,7 @@ import { Badge } from "@/components/ui/badge";
 import { AboutBlock } from "@/components/home-page/about-block";
 import { HowItWorksBlock } from "@/components/home-page/how-it-works-block";
 import { HodnoceniRizikCta } from "@/components/home-page/hodnoceni-rizik-cta";
+import { ContactBlock } from "@/components/contact/contact-block";
 
 export const metadata: Metadata = {
   title: site.defaultTitle,
@@ -91,8 +92,9 @@ export default function Page() {
             </h2>
             <p className="font-display mt-8 bg-radial-[at_50%_75%] from-orange-900 to-orange-600 bg-clip-text text-2xl leading-snug font-semibold text-transparent sm:text-3xl lg:text-4xl">
               Většina nehod nevzniká neznalostí legislativy, ale selháním lidského faktoru.
-              Zaměstnanci ve spěchu a rutině obcházejí pravidla. Mistři fungují jako „policajti" a
-              lidé před nimi problémy zatajují. Klasické školení BOZP je pro tým jen nutné zlo.
+              Zaměstnanci ve spěchu a rutině obcházejí pravidla. Mistři fungují jako
+              „policajti`&quot a lidé před nimi problémy zatajují. Klasické školení BOZP je pro tým
+              jen nutné zlo.
             </p>
             <p className="font-display mt-8 bg-radial-[at_50%_75%] from-orange-900 to-orange-600 bg-clip-text text-2xl leading-snug font-semibold text-transparent sm:text-3xl lg:text-4xl">
               Pokud chcete trvalou změnu, musíte přestat jen nařizovat a začít lidi trénovat.
@@ -150,6 +152,12 @@ export default function Page() {
         <Container asChild>
           <section>
             <HodnoceniRizikCta />
+          </section>
+        </Container>
+
+        <Container asChild>
+          <section id="kontakt">
+            <ContactBlock />
           </section>
         </Container>
       </div>
