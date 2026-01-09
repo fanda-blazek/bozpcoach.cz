@@ -1,10 +1,9 @@
-import { Check } from "lucide-react";
+import { Linkedin, Mail, Phone } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
 import { ContactForm } from "./contact-form";
+import { Button } from "../ui/button";
 
 export function ContactBlock(props: React.ComponentProps<"div">) {
   return (
@@ -17,42 +16,42 @@ export function ContactBlock(props: React.ComponentProps<"div">) {
       <div className="container grid w-full grid-cols-1 gap-x-32 overflow-hidden lg:grid-cols-2">
         <div className="w-full pb-10 md:space-y-10 md:pb-0">
           <div className="space-y-4 md:max-w-160">
-            <h2 className="font-display text-3xl font-bold tracking-tight lg:text-6xl">Kontakt</h2>
+            <h2 className="font-display text-3xl font-bold tracking-tight lg:text-6xl">
+              Změňme vaši firemní kulturu společně
+            </h2>
             <div className="text-muted-foreground md:text-base lg:text-lg lg:leading-7">
-              In non libero bibendum odio pellentesque ullamcorper. Aenean condimentum, dolor
-              commodo pulvinar bibendum.
+              Nečekejte na další úraz. Zavolejte mi nebo napište na nezávaznou konzultaci. Působím
+              po celé ČR (osobně i online).
             </div>
           </div>
           <div className="hidden md:block">
             <div className="space-y-16 pb-20 lg:pb-0">
               <div className="space-y-6">
-                <div className="mt-16 flex overflow-hidden">
-                  <Avatar className="size-11">
-                    <AvatarImage src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-1.webp" />
-                    <AvatarFallback>SB</AvatarFallback>
-                  </Avatar>
-                  <Avatar className="-ml-4 size-11">
-                    <AvatarImage src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-3.webp" />
-                    <AvatarFallback>RA</AvatarFallback>
-                  </Avatar>
-                  <Avatar className="-ml-4 size-11">
-                    <AvatarImage src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-2.webp" />
-                    <AvatarFallback>JS</AvatarFallback>
-                  </Avatar>
-                </div>
                 <div className="space-y-4">
-                  <p className="text-sm font-semibold">What you can expect:</p>
+                  <p className="text-sm font-semibold">moje kontakntí údaje</p>
                   <div className="flex items-center space-x-2.5">
-                    <Check className="text-muted-foreground size-5 shrink-0" />
-                    <p className="text-sm">Detailed product presentation tailored to you</p>
+                    <Button asChild variant="secondary">
+                      <address>
+                        <Mail />
+                        <a href="mailto:jim@example.com">jim@example.com</a>
+                      </address>
+                    </Button>
                   </div>
                   <div className="flex items-center space-x-2.5">
-                    <Check className="text-muted-foreground size-5 shrink-0" />
-                    <p className="text-sm">Consulting on your messaging strategy</p>
+                    <Button asChild variant="secondary">
+                      <address>
+                        <Phone />
+                        <a href="tel:+14155550132">+1 (415) 555‑0132</a>
+                      </address>
+                    </Button>
                   </div>
                   <div className="flex items-center space-x-2.5">
-                    <Check className="text-muted-foreground size-5 shrink-0" />
-                    <p className="text-sm">Answers to all the questions you have</p>
+                    <Button asChild variant="secondary">
+                      <address>
+                        <Linkedin />
+                        <a href="https://cz.linkedin.com/in/nikolahošková">linkedin</a>
+                      </address>
+                    </Button>
                   </div>
                 </div>
               </div>
