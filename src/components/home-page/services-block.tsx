@@ -1,148 +1,137 @@
 "use client";
 
-import { BriefcaseIcon, RocketIcon, UsersIcon } from "lucide-react";
+import { ArrowRight, BrainIcon, CheckCircle, MegaphoneIcon, RocketIcon } from "lucide-react";
 
-import { cn } from "@/lib/utils";
-import { Card } from "../ui/card";
-import { Button } from "../ui/button";
-// import { Link } from "../ui/link";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    icon: <UsersIcon className="size-6" />,
-    title: "PRO ZAMĚSTNANCE",
-    subtitle: "Interaktivní trénink pro výrobu a sklady",
+    icon: <BrainIcon className="h-6 w-6" />,
+    title: "Workshop: Bezpečná mysl",
     description:
-      'Žádné nudné slajdy a předčítání zákonů. Naučím vaše lidi techniku "Stop-Check" a jak odhalit 4 pasti mysli: spěch, únavu, frustraci a rutinu. Lidé pochopí, proč to dělají pro sebe, ne pro firmu.',
-    items: ["Workshop: Bezpečná mysl"],
-    buttonText: "Poptat firemní workshop",
-    buttonHref: "#kontakt",
+      "Interaktivní trénink zaměřený na lidský faktor, ne na zákony. Naučím vaše lidi pracovat s pozorností a ukážu jim, jak funguje mozek v rutině. Cíl: Aby bezpečnost dodržovali pro sebe, ne pro firmu.",
+    items: [
+      "Technika Stop-Check: Nástroj na zapnutí pozornosti.",
+      "Pasti mysli: Jak spěch a únava ovlivňují úsudek.",
+      "Praxe: Rizika z vašeho provozu.",
+    ],
+    deliverables: ["Vnitřní motivace", "Nástroje pro soustředění", "Certifikát"],
+    duration: "2–4 hodiny (dle dohody)",
+    price: "Cena na vyžádání",
+    featured: false,
   },
   {
-    icon: <BriefcaseIcon className="size-6" />,
-    title: "PRO VEDENÍ",
-    subtitle: "Rozvojové školení pro mistry a teamleadery",
+    icon: <MegaphoneIcon className="h-6 w-6" />,
+    title: "Trénink: Lídr jako kouč bezpečnosti",
     description:
-      "Změňte roli mistrů z drába na respektovaného lídra. Trénujeme, jak vést vytýkací rozhovor bez obviňování, jak budovat psychologické bezpečí a jak motivovat tým k dodržování OOPP jinak než křikem.",
-    items: ["Trénink: Lídr jako kouč bezpečnosti"],
-    buttonText: "Poptat trénink pro lídry",
-    buttonHref: "#kontakt",
+      "Praktický trénink pro mistry a parťáky. Změňte jejich roli z kontrolorů na respektované lídry. Naučí se, jak vytknout chybu bez konfliktu a jak motivovat lidi k nošení OOPP jinak než křikem.",
+    items: [
+      "Psychologie vlivu: Jak mluvit, aby lidé naslouchali.",
+      "Zpětná vazba: Techniky pro nápravu chování.",
+      "Kultura: Jak budovat důvěru místo strachu.",
+    ],
+    deliverables: ["Koučující přístup", "Respektující autorita", "Certifikát"],
+    duration: "3–4 hodiny (max. 8 osob)",
+    price: "Cena na vyžádání",
+    featured: true,
+  },
+  {
+    icon: <RocketIcon className="h-6 w-6" />,
+    title: "Safety leadership akademie",
+    description:
+      "Intenzivní individuální program pro OZO a manažery. Provedu vás změnou z role kontrolora na partnera managementu. Nastavíme strategii, zvýšíme vaše sebevědomí a natrénujeme řešení krizových situací.",
+    items: [
+      "Strategie: Audit silných stránek a cíle.",
+      "Koučink: Metody pro změnu myšlení lidí (GROW).",
+      "Trénink: Zkouška náročných rozhovorů nanečisto.",
+    ],
+    deliverables: ["Osobní rozvojový plán", "Strategie kultury", "Šablony"],
+    duration: "5 setkání (1:1)",
+    price: "9 900 Kč",
+    featured: false,
   },
 ];
 
-const featuredService = {
-  icon: <RocketIcon className="size-6" />,
-  title: "SAFETY LEADERSHIP AKADEMIE (1:1)",
-  subtitle: "Trénink vlivu a psychologie pro OZO a manažery",
-  description:
-    'Nebudeme si jen povídat. Budeme trénovat. Tento program vás provede kompletní změnou přístupu – od "policajta" k respektovanému lídrovi, kterého lidé poslouchají.',
-  items: [
-    "Nultá hodina – nastavíme strategii, cíle a plán na míru",
-    "Představení metod – konkrétní nástroje z psychologie a koučinku (GROW, zpětná vazba)",
-    "Praktický trénink – zkoušíme metody na situacích z vašeho provozu",
-  ],
-  target: "Pro bezpečáky (OZO), mistry a vedoucí výroby",
-  scope: "5 setkání včetně materiálů",
-  price: "9 900 Kč",
-  priceNote: "Možnost jednorázové konzultace za 2 500 Kč",
-  buttonText: "Chci začít nultou hodinou",
-  buttonHref: "#kontakt",
-};
-
-export function ServicesBlock({ className }: { className?: string }) {
+export function ServicesBlock(props: React.ComponentProps<"div">) {
   return (
-    <div className={cn("space-y-8", className)}>
-      {/* First two cards in a row */}
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+    <div {...props}>
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {services.map((service, index) => (
-          <Card
+          <div
             key={index}
-            className="border-border flex flex-col space-y-6 rounded-lg border p-8 transition-shadow"
+            className={`group relative overflow-hidden rounded-xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+              service.featured
+                ? "border-primary/20 bg-background shadow-lg"
+                : "border-border bg-background/80 hover:bg-background backdrop-blur-sm"
+            }`}
           >
-            <div className="flex items-center gap-4">
-              <div className="bg-muted rounded-full p-3">{service.icon}</div>
-              <h3 className="text-xl font-semibold">{service.title}</h3>
-            </div>
-
-            <p className="text-foreground -mt-2 text-sm font-medium">{service.subtitle}</p>
-
-            <p className="text-muted-foreground leading-relaxed">{service.description}</p>
-
-            <div className="grow space-y-3">
-              {service.items.map((item, itemIndex) => (
-                <div key={itemIndex} className="flex gap-3">
-                  <div className="bg-foreground mt-2 h-1.5 w-1.5 shrink-0 rounded-full" />
-                  <span className="text-sm leading-relaxed">{item}</span>
+            <div className="p-8">
+              <div className="flex items-start justify-between">
+                <div className="flex items-center gap-3">
+                  <div
+                    className={`rounded-lg p-3 ${
+                      service.featured
+                        ? "bg-primary/10 text-primary"
+                        : "bg-muted text-muted-foreground"
+                    }`}
+                  >
+                    {service.icon}
+                  </div>
+                  <div>
+                    <h3 className="font-display text-xl font-semibold">{service.title}</h3>
+                    <div className="text-muted-foreground mt-1 text-sm">{service.duration}</div>
+                  </div>
                 </div>
-              ))}
-            </div>
+              </div>
 
-            <Button asChild className="w-full" variant="outline">
-              {service.buttonText}
-            </Button>
-          </Card>
+              <p className="text-muted-foreground mt-6 leading-relaxed">{service.description}</p>
+
+              <div className="mt-6 space-y-4">
+                <div>
+                  <h4 className="mb-3 text-sm font-medium">Co je zahrnuto:</h4>
+                  <ul className="space-y-2">
+                    {service.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-center gap-3 text-sm">
+                        <CheckCircle className="h-4 w-4 shrink-0 text-green-600" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="bg-muted/50 rounded-lg p-3">
+                  <h4 className="mb-2 text-sm font-medium">Výstupy:</h4>
+                  <div className="flex flex-wrap gap-1">
+                    {service.deliverables.map((deliverable, delivIndex) => (
+                      <Badge key={delivIndex} variant="secondary" className="text-xs">
+                        {deliverable}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-border mt-8 border-t pt-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="text-lg font-semibold">{service.price}</div>
+                    <div className="text-muted-foreground text-xs">Nabídka na míru</div>
+                  </div>
+                  <Button
+                    size="sm"
+                    variant={service.featured ? "default" : "outline"}
+                    className="transition-all group-hover:shadow-md"
+                  >
+                    Mám zájem
+                    <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
-
-      {/* Featured card - full width with horizontal layout */}
-      <Card className="border-primary ring-primary rounded-lg border-2 p-8 ring-2">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
-          {/* Left side - Main info */}
-          <div className="flex-1 space-y-6">
-            <div className="flex items-center gap-4">
-              <div className="bg-primary/10 rounded-full p-3">{featuredService.icon}</div>
-              <div>
-                <h3 className="text-2xl font-bold">{featuredService.title}</h3>
-                <p className="text-foreground mt-1 text-sm font-medium">
-                  {featuredService.subtitle}
-                </p>
-              </div>
-            </div>
-
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              {featuredService.description}
-            </p>
-
-            <div className="space-y-3">
-              <p className="text-foreground text-sm font-semibold">Jak spolupráce probíhá:</p>
-              {featuredService.items.map((item, itemIndex) => (
-                <div key={itemIndex} className="flex gap-3">
-                  <div className="bg-primary mt-2 h-1.5 w-1.5 shrink-0 rounded-full" />
-                  <span className="text-muted-foreground text-sm leading-relaxed">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right side - Details & CTA */}
-          <div className="flex flex-col gap-6 lg:w-80">
-            <div className="border-border bg-muted/50 space-y-4 rounded-lg border p-6">
-              <div>
-                <p className="text-muted-foreground mb-2 text-xs font-medium tracking-wide uppercase">
-                  Pro koho
-                </p>
-                <p className="text-foreground text-sm font-medium">{featuredService.target}</p>
-              </div>
-
-              <div>
-                <p className="text-muted-foreground mb-2 text-xs font-medium tracking-wide uppercase">
-                  Rozsah
-                </p>
-                <p className="text-foreground text-sm font-medium">{featuredService.scope}</p>
-              </div>
-
-              <div className="border-border border-t pt-4">
-                <p className="text-foreground mb-1 text-3xl font-bold">{featuredService.price}</p>
-                <p className="text-muted-foreground text-xs">{featuredService.priceNote}</p>
-              </div>
-            </div>
-
-            <Button asChild size="lg" className="w-full">
-              {featuredService.buttonText}
-            </Button>
-          </div>
-        </div>
-      </Card>
     </div>
   );
 }

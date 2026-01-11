@@ -14,14 +14,14 @@ export function NewsletterCta(props: React.ComponentProps<"div">) {
         </Badge>
 
         {/* Heading */}
-        <h4 className="mt-4 text-2xl font-semibold tracking-tight md:text-center md:text-3xl xl:text-4xl">
+        <h4 className="font-display mt-4 text-2xl font-semibold tracking-tight md:text-center md:text-3xl xl:text-4xl">
           Přihlaste se k odběru našeho newsletteru
         </h4>
 
         {/* Description */}
         <p className="text-muted-foreground mt-2 text-lg font-medium md:text-center xl:text-xl">
           Získejte <span className="text-primary">nejnovější informace</span> a{" "}
-          <span className="text-primary">exkluzivní</span> nabídky na školení BOZP.
+          <span className="text-primary">exkluzivní</span> nabídky BOZP.
         </p>
 
         {/* Form */}

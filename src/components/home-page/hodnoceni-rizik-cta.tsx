@@ -8,7 +8,9 @@ export function HodnoceniRizikCta(props: React.ComponentProps<"div">) {
       <div className="overflow-hidden">
         <div className="bg-muted/50 relative mx-auto flex flex-col justify-between gap-6 overflow-hidden rounded-xl border md:flex-row">
           <div className="self-center p-6 md:px-12 md:py-24">
-            <h2 className="text-3xl font-semibold md:text-4xl">Aplikace na hodnocení rizik</h2>
+            <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-4xl">
+              Aplikace na hodnocení rizik
+            </h2>
             <p className="text-muted-foreground mt-4 md:text-lg">
               Discover the full potential of our platform. Try our interactive demo or watch a
               comprehensive walkthrough today.

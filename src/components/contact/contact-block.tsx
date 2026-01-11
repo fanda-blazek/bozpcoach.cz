@@ -17,7 +17,9 @@ export function ContactBlock(props: React.ComponentProps<"div">) {
       <div className="container grid w-full grid-cols-1 gap-x-32 overflow-hidden lg:grid-cols-2">
         <div className="w-full pb-10 md:space-y-10 md:pb-0">
           <div className="space-y-4 md:max-w-160">
-            <h2 className="font-display text-3xl font-bold tracking-tight lg:text-6xl">Kontakt</h2>
+            <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              Kontakt
+            </h2>
             <div className="text-muted-foreground md:text-base lg:text-lg lg:leading-7">
               In non libero bibendum odio pellentesque ullamcorper. Aenean condimentum, dolor
               commodo pulvinar bibendum.
