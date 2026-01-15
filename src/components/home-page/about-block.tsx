@@ -10,8 +10,11 @@ export function AboutBlock(props: React.ComponentProps<"div">) {
           O mně
         </h2>
         <p className="max-w-xl text-xl">
-          Shadcnblocks.com makes it easy to build customer portals, CRMs, internal tools, and other
-          business applications for your team. In minutes, not months.
+          Jsem Mgr. Nikola Hošková, DiS. Spojuji dva světy: tvrdou legislativu (OZO v prevenci
+          rizik) a lidskou psychologii (Kouč). V praxi jsem viděla, že represe nefunguje. Lidé musí
+          bezpečnost dodržovat proto, že chtějí, ne proto, že musí. Proto jsem založila projekt BOZP
+          Coach a spoluzaložila aplikaci hodnoceni-rizik.cz. Mým cílem není jen splnit normy. Mým
+          cílem je, aby se vaši lidé vraceli z práce domů zdraví.
         </p>
       </div>
       <div className="grid gap-6 md:grid-cols-2">
@@ -22,11 +25,11 @@ export function AboutBlock(props: React.ComponentProps<"div">) {
           height={1000}
           className="size-full max-h-96 rounded-2xl object-cover"
         />
-        <div className="bg-muted flex flex-col justify-between gap-10 rounded-2xl bg-[url('https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/christin-hume-Hcfwew744z4-unsplash.jpg')] bg-cover bg-center p-10">
-          <p className="text-sm font-semibold text-white">OUR MISSION</p>
-          <p className="text-lg font-medium text-white">
-            We believe that building software should be insanely easy. That everyone should have the
-            freedom to create the tools they need, without any developers, designers or drama.
+        <div className="bg-muted flex flex-col justify-between gap-10 rounded-2xl bg-cover bg-center p-10">
+          <p className="text-sm font-semibold">Lorem ipsum dolor sit amet.</p>
+          <p className="text-lg font-medium">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel non laboriosam quam aliquid
+            magnam ipsa ratione, veritatis aperiam eaque doloremque.
           </p>
         </div>
       </div>
