@@ -23,6 +23,7 @@ import { AboutBlock } from "@/components/home-page/about-block";
 import { HowItWorksBlock } from "@/components/home-page/how-it-works-block";
 import { HodnoceniRizikCta } from "@/components/home-page/hodnoceni-rizik-cta";
 import { ContactBlock } from "@/components/contact/contact-block";
+import { FaqBlock } from "@/components/faq/faq-block";
 
 export const metadata: Metadata = {
   title: site.defaultTitle,
@@ -84,7 +85,7 @@ export default function Page() {
         </HeroContent>
       </Hero>
 
-      <div className="space-y-12 py-24 md:space-y-20">
+      <div className="space-y-16 py-24 md:space-y-32">
         <Container asChild>
           <section id="problem">
             <h2 className="text-lg font-medium sm:text-xl">
@@ -93,7 +94,7 @@ export default function Page() {
             <p className="font-display mt-8 bg-radial-[at_50%_75%] from-orange-900 to-orange-600 bg-clip-text text-2xl leading-snug font-semibold text-transparent sm:text-3xl lg:text-4xl">
               Většina nehod nevzniká neznalostí legislativy, ale selháním lidského faktoru.
               Zaměstnanci ve spěchu a rutině obcházejí pravidla. Mistři fungují jako
-              „policajti`&quot a lidé před nimi problémy zatajují. Klasické školení BOZP je pro tým
+              „policajti&quot; a lidé před nimi problémy zatajují. Klasické školení BOZP je pro tým
               jen nutné zlo.
             </p>
             <p className="font-display mt-8 bg-radial-[at_50%_75%] from-orange-900 to-orange-600 bg-clip-text text-2xl leading-snug font-semibold text-transparent sm:text-3xl lg:text-4xl">
@@ -108,7 +109,9 @@ export default function Page() {
 
         <Container asChild>
           <section id="sluzby">
-            <h2 className="font-display text-2xl font-bold sm:text-3xl">Služby</h2>
+            <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              Služby
+            </h2>
             <p className="max-w-prose pt-8">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam fuga illum obcaecati
               sapiente sint nemo unde blanditiis voluptates nesciunt exercitationem.
@@ -130,8 +133,14 @@ export default function Page() {
         </Container>
 
         <Container asChild>
-          <section>
-            <NewsletterCta />
+          <section id="o-mne">
+            <AboutBlock />
+          </section>
+        </Container>
+
+        <Container asChild>
+          <section id="kontakt">
+            <ContactBlock />
           </section>
         </Container>
 
@@ -140,8 +149,8 @@ export default function Page() {
         </Container>
 
         <Container asChild>
-          <section id="o-mne">
-            <AboutBlock />
+          <section>
+            <NewsletterCta />
           </section>
         </Container>
 
@@ -155,9 +164,13 @@ export default function Page() {
           </section>
         </Container>
 
+        <Container>
+          <Separator />
+        </Container>
+
         <Container asChild>
-          <section id="kontakt">
-            <ContactBlock />
+          <section id="faq">
+            <FaqBlock />
           </section>
         </Container>
       </div>

@@ -49,11 +49,13 @@ export function HowItWorksBlock(props: React.ComponentProps<"div">) {
           {DATA.map((item, index) => (
             <div
               key={index}
-              className="bg-muted relative my-12 overflow-hidden rounded-lg px-8 py-16 shadow-none sm:px-12 sm:py-24 lg:px-16 lg:py-32"
+              className="bg-muted relative my-12 overflow-hidden rounded-lg px-4 py-8 shadow-none sm:px-6 sm:py-12 lg:px-8 lg:py-16"
             >
               <div className="gap-4 sm:gap-6">
                 <div className="block shrink-0">{item.icon}</div>
-                <div className="absolute top-12 right-12 font-mono text-5xl">0{index + 1}</div>
+                <div className="absolute top-12 right-12 font-mono text-2xl opacity-50">
+                  0{index + 1}
+                </div>
                 <div className="mt-6">
                   <h4 className="font-display mb-2 text-2xl font-semibold">{item.title}</h4>
                   <p className="text-muted-foreground mt-6 text-xs sm:text-base">

@@ -6,8 +6,8 @@ export function AboutBlock(props: React.ComponentProps<"div">) {
   return (
     <div {...props} className={cn("flex flex-col gap-16 lg:gap-28", props.className)}>
       <div className="flex flex-col gap-4 lg:gap-8">
-        <h2 className="font-display text-3xl font-bold tracking-tight lg:text-6xl">
-          Kdo je Nikola Hošková?
+        <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+          O mně
         </h2>
         <p className="max-w-xl text-xl">
           Jsem Mgr. Nikola Hošková, DiS. Spojuji dva světy: tvrdou legislativu (OZO v prevenci
