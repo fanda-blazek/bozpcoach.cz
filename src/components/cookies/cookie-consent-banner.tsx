@@ -33,20 +33,20 @@ export function CookieConsentBanner() {
       <div className="bg-background text-foreground border-border pointer-events-auto grid w-full gap-5 rounded-xl border p-4 shadow-md dark:shadow-none">
         <div>
           <p>
-            We use cookies to enhance your browsing experience, analyze site traffic, and provide
-            personalized content. You can choose to accept all cookies or customize your
-            preferences.
+            Soubory cookies používáme k vylepšení vašeho zážitku z prohlížení, analýze návštěvnosti
+            webu a poskytování personalizovaného obsahu. Můžete se rozhodnout přijmout všechny
+            soubory cookies nebo si upravit nastavení.
           </p>
         </div>
         <div className="flex flex-wrap items-center justify-start gap-3">
           <Button variant="secondary" size="sm" onClick={handleDeny}>
-            Deny
+            Odmítnout
           </Button>
           <Button variant="secondary" size="sm" onClick={handleAcceptAll}>
-            Accept all
+            Přijmout vše
           </Button>
           <Button size="sm" className="sm:ml-auto sm:justify-self-end" onClick={openSettingsDialog}>
-            Consent settings
+            Nastavení soukromí
           </Button>
         </div>
       </div>

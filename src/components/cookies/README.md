@@ -14,13 +14,13 @@ src/components/cookies/
 ├── cookie-settings-dialog.tsx      # Detailed preferences - dialog with settings UI
 ├── cookie-settings-trigger.tsx     # Reusable unstyled button, that will trigger the settings dialog to open state
 ├── cookie-error-boundary.tsx       # Error handling wrapper
-└── cookie-policy.tsx               # Cookie policy table component
+└── cookie-policy.tsx               # Pravidla pro používání cookies table component
 
 src/config/
 └── cookies.ts                      # Cookie configuration - define all cookies here
 
 src/app/cookies/
-└── page.tsx                        # Cookie policy page (app/cookies route)
+└── page.tsx                        # Pravidla pro používání cookies page (app/cookies route)
 ```
 
 ### What Each File Does
@@ -170,9 +170,9 @@ export async function ThirdPartyScripts() {
 }
 ```
 
-## Cookie Policy Page
+## Pravidla pro používání cookies Page
 
-The cookie policy page (`app/cookies/page.tsx`) displays a comprehensive overview of all cookies used on your site. It includes a hero section and renders a detailed table of cookies from the configuration.
+The Pravidla pro používání cookies page (`app/cookies/page.tsx`) displays a comprehensive overview of all cookies used on your site. It includes a hero section and renders a detailed table of cookies from the configuration.
 
 ```tsx
 // app/cookies/page.tsx
@@ -199,7 +199,7 @@ export default function Page() {
 - **Analytics** - Track usage and performance
 - **Marketing** - Advertising and remarketing
 
-The configuration automatically generates the cookie policy table, so keep this file updated whenever you add new tracking scripts or cookies.
+The configuration automatically generates the Pravidla pro používání cookies table, so keep this file updated whenever you add new tracking scripts or cookies.
 
 ## How It Works
 

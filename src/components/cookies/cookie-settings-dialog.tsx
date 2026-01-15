@@ -49,9 +49,10 @@ export function CookieSettingsDialog() {
     <AlertDialog open={isSettingsOpen} onOpenChange={closeSettingsDialog}>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Cookie Consent Settings</AlertDialogTitle>
+          <AlertDialogTitle>Nastavení cookies</AlertDialogTitle>
           <AlertDialogDescription>
-            Manage your cookie preferences. Blocking some cookies may impact your experience.
+            Spravujte své předvolby souborů cookies. Zablokování některých cookies může ovlivnit váš
+            uživatelský zážitek.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <div>
@@ -59,7 +60,7 @@ export function CookieSettingsDialog() {
             <div className="flex flex-col gap-2 p-3">
               <div className="flex items-center justify-between gap-2">
                 <Label htmlFor="necessary" className="cursor-not-allowed opacity-70">
-                  Necessary
+                  Nezbytné
                 </Label>
                 <Switch
                   id="necessary"
@@ -69,15 +70,15 @@ export function CookieSettingsDialog() {
                 />
               </div>
               <p className="text-muted-foreground text-sm opacity-70">
-                Essential for the website to function. Enable basic features like page navigation
-                and secure areas.
+                „Nezbytné pro fungování webových stránek. Umožňují základní funkce, jako je navigace
+                na stránce a přístup k zabezpečeným sekcím.
               </p>
             </div>
 
             <div className="flex flex-col gap-2 p-3">
               <div className="flex items-center justify-between gap-2">
                 <Label htmlFor="functional" className="cursor-pointer">
-                  Functional
+                  Funkční
                 </Label>
                 <Switch
                   id="functional"
@@ -87,15 +88,15 @@ export function CookieSettingsDialog() {
                 />
               </div>
               <p className="text-muted-foreground text-sm">
-                Enable enhanced functionality and personalization, such as remembering your
-                preferences and settings.
+                Zajišťují lepší funkčnost a přizpůsobení webu, například si pamatují vaše zvolené
+                nastavení nebo jazykové preference.
               </p>
             </div>
 
             <div className="flex flex-col gap-2 p-3">
               <div className="flex items-center justify-between gap-2">
                 <Label htmlFor="analytics" className="cursor-pointer">
-                  Analytics
+                  Analytyka
                 </Label>
                 <Switch
                   id="analytics"
@@ -105,8 +106,8 @@ export function CookieSettingsDialog() {
                 />
               </div>
               <p className="text-muted-foreground text-sm">
-                Help us understand how visitors interact with our website to improve content and
-                user experience.
+                Díky nim lépe rozumíme tomu, jak lidé náš web používají. To nám pomáhá zlepšovat
+                obsah i to, jak se vám se stránkami pracuje.
               </p>
             </div>
 
@@ -123,22 +124,22 @@ export function CookieSettingsDialog() {
                 />
               </div>
               <p className="text-muted-foreground text-sm">
-                Used to deliver relevant advertisements and measure the effectiveness of advertising
-                campaigns.
+                Pomáhají nám zobrazovat reklamy, které vás zajímají, a vyhodnocovat úspěšnost našich
+                marketingových aktivit.
               </p>
             </div>
           </div>
 
           <div className="mt-4">
             <p className="text-muted-foreground text-sm">
-              For more information about how we use cookies, please read our{" "}
+              Vícš informací o tom jak používáme cookies naleznete zde{" "}
               <Link
                 href={legalLinks.cookies.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground underline"
               >
-                cookies policy.
+                Pravidla cookies
               </Link>
             </p>
           </div>
@@ -146,16 +147,16 @@ export function CookieSettingsDialog() {
         <AlertDialogFooter className="mt-4">
           <AlertDialogPrimitive.Action asChild>
             <Button variant="secondary" onClick={handleDeny}>
-              Deny
+              Odmítnout
             </Button>
           </AlertDialogPrimitive.Action>
           <AlertDialogPrimitive.Action asChild>
             <Button variant="secondary" onClick={handleAcceptAll}>
-              Accept all
+              Přijmout vše
             </Button>
           </AlertDialogPrimitive.Action>
           <AlertDialogPrimitive.Action asChild>
-            <Button onClick={handleSave}>Save</Button>
+            <Button onClick={handleSave}>Uložit</Button>
           </AlertDialogPrimitive.Action>
         </AlertDialogFooter>
       </AlertDialogContent>
