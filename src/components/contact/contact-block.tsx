@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { ContactForm } from "./contact-form";
 import { Button } from "../ui/button";
 import { contact, formatPhoneNumber } from "@/config/contact";
+import { SocialMediaIcons } from "../layout/social-media-icons";
 
 export function ContactBlock(props: React.ComponentProps<"div">) {
   return (
@@ -45,20 +46,9 @@ export function ContactBlock(props: React.ComponentProps<"div">) {
                       </address>
                     </Button>
                   </div>
-
-                  <div className="flex items-center space-x-2.5">
-                    <Button asChild variant="secondary">
-                      <address className="flex items-center gap-2 not-italic">
-                        <Linkedin className="size-4" />
-                        <a
-                          href="https://cz.linkedin.com/in/nikolahošková"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          linkedin
-                        </a>
-                      </address>
-                    </Button>
+                  <div className="flex flex-col items-start">
+                    <p className="text-sm font-semibold">Moje sociální sítě</p>
+                    <SocialMediaIcons className="m-0 p-0" />
                   </div>
                 </div>
               </div>
