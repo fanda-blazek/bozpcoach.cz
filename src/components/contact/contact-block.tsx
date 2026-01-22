@@ -4,6 +4,7 @@ import { ContactForm } from "./contact-form";
 import { Button } from "../ui/button";
 import { contact, formatPhoneNumber } from "@/config/contact";
 import { SocialMediaIcons } from "../layout/social-media-icons";
+import { Separator } from "../ui/separator";
 
 export function ContactBlock(props: React.ComponentProps<"div">) {
   return (
@@ -19,47 +20,36 @@ export function ContactBlock(props: React.ComponentProps<"div">) {
               Kontakt
             </h2>
             <div className="text-muted-foreground md:text-base lg:text-lg lg:leading-7">
-              In non libero bibendum odio pellentesque ullamcorper. Aenean condimentum, dolor
-              commodo pulvinar bibendum.
+              Nečekejte na další úraz. Zavolejte mi nebo napište na nezávaznou konzultaci. Působím
+              po celé ČR (osobně i online).
             </div>
           </div>
           <div className="hidden md:block">
             <div className="space-y-16 pb-20 lg:pb-0">
               <div className="space-y-6">
-                <div className="mt-16 flex overflow-hidden">
-                  <Avatar className="size-11">
-                    <AvatarImage src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-1.webp" />
-                    <AvatarFallback>SB</AvatarFallback>
-                  </Avatar>
-                  <Avatar className="-ml-4 size-11">
-                    <AvatarImage src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-3.webp" />
-                    <AvatarFallback>RA</AvatarFallback>
-                  </Avatar>
-                  <Avatar className="-ml-4 size-11">
-                    <AvatarImage src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-2.webp" />
-                    <AvatarFallback>JS</AvatarFallback>
-                  </Avatar>
-                </div>
-                <div className="space-y-4">
-                  <p className="text-sm font-semibold">moje kontakntí údaje</p>
+                <div className="mt-16 flex overflow-hidden"></div>
+                <div className="flex flex-col space-y-4">
+                  <div className="space-y-4">
+                    <p className="text-sm font-semibold">moje kontakntí údaje</p>
+                    <div className="flex items-center space-x-2.5">
+                      <Button asChild variant="secondary">
+                        <address className="flex items-center gap-2 not-italic">
+                          <Mail className="size-4" />
+                          <a href={`mailto:${contact.email}`}>{contact.email}</a>
+                        </address>
+                      </Button>
+                    </div>
 
-                  <div className="flex items-center space-x-2.5">
-                    <Button asChild variant="secondary">
-                      <address className="flex items-center gap-2 not-italic">
-                        <Mail className="size-4" />
-                        <a href={`mailto:${contact.email}`}>{contact.email}</a>
-                      </address>
-                    </Button>
+                    <div className="flex items-center space-x-2.5">
+                      <Button asChild variant="secondary">
+                        <address className="flex items-center gap-2 not-italic">
+                          <Phone className="size-4" />
+                          <a href={`tel:${contact.phone}`}>{formatPhoneNumber(contact.phone)}</a>
+                        </address>
+                      </Button>
+                    </div>
                   </div>
-
-                  <div className="flex items-center space-x-2.5">
-                    <Button asChild variant="secondary">
-                      <address className="flex items-center gap-2 not-italic">
-                        <Phone className="size-4" />
-                        <a href={`tel:${contact.phone}`}>{formatPhoneNumber(contact.phone)}</a>
-                      </address>
-                    </Button>
-                  </div>
+                  <Separator orientation="horizontal" />
                   <div className="flex flex-col items-start">
                     <p className="text-sm font-semibold">Moje sociální sítě</p>
                     <SocialMediaIcons className="m-0 p-0" />
