@@ -105,11 +105,12 @@ const translations = {
     contactPhone: "nebo na telefonním čísle:",
   },
   en: {
-    title: "Cookie Policy",
+    title: "Pravidla pro používání cookies",
     effectiveFrom: "Effective from:",
     lastUpdated: "Last updated:",
     introTitle: "1. Introduction",
-    introText: "This Cookie Policy explains what cookies are and how we use them on our website",
+    introText:
+      "This Pravidla pro používání cookies explains what cookies are and how we use them on our website",
     whatAreCookiesTitle: "2. What Are Cookies?",
     whatAreCookiesText:
       "Cookies are small text files that are stored on your device (computer, mobile phone) when you visit a website. In addition to cookies, we may also use localStorage and sessionStorage to store data directly in your browser. They help us ensure the website functions correctly, make it more secure, understand how it performs, and analyze what works and where it needs improvement.",
@@ -133,7 +134,8 @@ const translations = {
       "You can manage your cookie preferences at any time using the button below or through your web browser settings. You can block or delete cookies as you wish. Please be aware that restricting cookies may impact the functionality of this website.",
     manageButton: "Change Cookie Settings",
     contactTitle: "6. Contact Us",
-    contactText: "If you have any questions about this Cookie Policy, you can contact us at:",
+    contactText:
+      "If you have any questions about this Pravidla pro používání cookies, you can contact us at:",
     contactPhone: "or by phone:",
   },
 };

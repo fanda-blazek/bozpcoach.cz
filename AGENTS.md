@@ -46,6 +46,7 @@ Expert full-stack developer specializing in modern, accessible web apps using Ty
    }
    ```
 5. **ESLint config:** Flat config format with Next.js presets and TypeScript strict rules
+
    ```js
    import { defineConfig, globalIgnores } from "eslint/config";
    import nextVitals from "eslint-config-next/core-web-vitals";
@@ -95,7 +96,7 @@ Expert full-stack developer specializing in modern, accessible web apps using Ty
 1. **config/ folder:** Central configuration hub - single source of truth for:
    - Contact information (email, phone, address)
    - Navigation links and menu structure
-   - Legal information (privacy policy, terms of service)
+   - Legal information (Zásady zpracování osobních údajů, terms of service)
    - Site metadata (title, description, SEO)
    - Social media links
    - Business details
@@ -212,8 +213,7 @@ Expert full-stack developer specializing in modern, accessible web apps using Ty
    );
 
    export interface ButtonProps
-     extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-       VariantProps<typeof buttonVariants> {}
+     extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {}
 
    export function Button({ className, variant, size, ...props }: ButtonProps) {
      return <button className={cn(buttonVariants({ variant, size, className }))} {...props} />;
@@ -340,6 +340,7 @@ Expert full-stack developer specializing in modern, accessible web apps using Ty
    - **`<Activity>`:** Render background activity while maintaining state
 5. **React 19.2 ESLint Patterns:**
    - **Deferred setState in Effects:** Avoid synchronous setState in useEffect - defer with `Promise.resolve()`
+
      ```tsx
      // ✅ Good - deferred state update
      useEffect(() => {
@@ -347,7 +348,7 @@ Expert full-stack developer specializing in modern, accessible web apps using Ty
          setMounted(true);
        });
      }, []);
-     
+
      // ❌ Bad - synchronous setState
      useEffect(() => {
        setMounted(true);

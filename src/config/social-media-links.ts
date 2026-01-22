@@ -1,4 +1,10 @@
-import { InstagramIcon, TwitterXIcon, YoutubeIcon, GitHubIcon } from "@/components/ui/icon-brand";
+import {
+  InstagramIcon,
+  TwitterXIcon,
+  YoutubeIcon,
+  GitHubIcon,
+  LinkedInIcon,
+} from "@/components/ui/icon-brand";
 
 export type ExternalLink = {
   name: string;
@@ -12,23 +18,18 @@ export type SocialMediaLink = ExternalLink & {
 export const socialMediaLinks = {
   instagram: {
     name: "Instagram",
-    href: "https://www.instagram.com/user-name/",
+    href: "https://www.instagram.com/bozpcoach/",
     icon: InstagramIcon,
   },
-  twitter: {
-    name: "Twitter",
-    href: "https://x.com/user-name",
-    icon: TwitterXIcon,
-  },
   youtube: {
-    name: "YouTube",
-    href: "https://www.youtube.com/@user-name",
+    name: "Youtube",
+    href: "https://www.youtube.com/@BOZPCoach",
     icon: YoutubeIcon,
   },
-  github: {
-    name: "GitHub",
-    href: "https://github.com/user-name",
-    icon: GitHubIcon,
+  linkedin: {
+    name: "Linkedin",
+    href: "https://www.linkedin.com/in/nikolahošková",
+    icon: LinkedInIcon,
   },
 } as const satisfies Record<string, SocialMediaLink>;
 

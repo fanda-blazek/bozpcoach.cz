@@ -113,8 +113,8 @@ export default function Page() {
               Služby
             </h2>
             <p className="max-w-prose pt-8">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam fuga illum obcaecati
-              sapiente sint nemo unde blanditiis voluptates nesciunt exercitationem.
+              Bezpečnost není o papírech, ale o lidech. Vyberte si program, který posune vaši firmu
+              od příkazů k respektu a zodpovědnosti.
             </p>
             <div className="pt-8">
               <ServicesBlock />

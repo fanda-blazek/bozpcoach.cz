@@ -5,9 +5,8 @@ import type { Metadata } from "next";
 import { legal } from "@/config/legal";
 import { site } from "@/config/site";
 
-const title = "Privacy Policy";
-const description =
-  "Information about the processing of personal data in accordance with the GDPR regulation";
+const title = "Zásady zpracování osobních údajů";
+const description = "Informace o zpracování osobních údajů v souladu s nařízením GDPR";
 
 export const metadata: Metadata = {
   title,

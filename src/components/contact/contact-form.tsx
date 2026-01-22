@@ -21,43 +21,43 @@ const contactFormSchema = z.object({
   name: z
     .string()
     .min(2, {
-      message: "Name must be at least 2 characters.",
+      message: "Jméno musí obsahovat alespoň 2 znaky.",
     })
     .max(50, {
-      message: "Name must not be longer than 50 characters.",
+      message: "Jméno nesmí být delší než 50 znaků.",
     }),
   surname: z
     .string()
     .min(2, {
-      message: "Surname must be at least 2 characters.",
+      message: "Příjmení musí obsahovat alespoň 2 znaky.",
     })
     .max(50, {
-      message: "Surname must not be longer than 50 characters.",
+      message: "Příjmení nesmí být delší než 50 znaků.",
     }),
   email: z.email({
-    message: "Please enter a valid email address.",
+    message: "Prosím zadejte platnou emailovou adresu.",
   }),
   phone: z
     .string()
     .min(9, {
-      message: "Phone number must be at least 9 characters.",
+      message: "Telefonní číslo musí obsahovat alespoň 9 znaků.",
     })
     .regex(/^[+]?[0-9\s\-()]+$/, {
-      message: "Please enter a valid phone number.",
+      message: "Prosím zadejte platné telefonní číslo.",
     }),
   message: z
     .string()
     .min(10, {
-      message: "Message must be at least 10 characters.",
+      message: "Zpráva musí obsahovat alespoň 10 znaků.",
     })
     .max(1000, {
-      message: "Message must not be longer than 1000 characters.",
+      message: "Zpráva nesmí být delší než 1000 znaků.",
     }),
   gdprConsent: z.boolean().refine((value) => value === true, {
-    message: "You must agree to the processing of personal data.",
+    message: "musíte souhlasit se zpracováním osobních údajů.",
   }),
   turnstileToken: z.string().min(1, {
-    message: "Please complete the verification.",
+    message: "Prosím potvrďte, že nejste robot.",
   }),
 });
 
@@ -102,20 +102,20 @@ export function ContactForm({ className, ...props }: React.ComponentProps<"div">
         if (response.ok) {
           setSubmitStatus({
             type: "success",
-            message: data.message || "Message sent successfully!",
+            message: data.message || "Zpráva úspěšně odeslána",
           });
           form.reset();
           turnstileRef.current?.reset();
         } else {
           setSubmitStatus({
             type: "error",
-            message: data.error || "An error occurred while sending the message.",
+            message: data.error || "Nastala chyb při odesílní",
           });
         }
       } catch {
         setSubmitStatus({
           type: "error",
-          message: "An error occurred while sending the message. Please try again later.",
+          message: "Nastala chyb při odesílání, zkuste to prosím později",
         });
       } finally {
         setIsSubmitting(false);
@@ -146,7 +146,7 @@ export function ContactForm({ className, ...props }: React.ComponentProps<"div">
                       onBlur={field.handleBlur}
                       onChange={(e) => field.handleChange(e.target.value)}
                       aria-invalid={isInvalid}
-                      placeholder="Your name"
+                      placeholder="Vaše jméno"
                     />
                     {isInvalid && <FieldError errors={field.state.meta.errors} />}
                   </Field>
@@ -167,7 +167,7 @@ export function ContactForm({ className, ...props }: React.ComponentProps<"div">
                       onBlur={field.handleBlur}
                       onChange={(e) => field.handleChange(e.target.value)}
                       aria-invalid={isInvalid}
-                      placeholder="Your surname"
+                      placeholder="Vaše příjmení"
                     />
                     {isInvalid && <FieldError errors={field.state.meta.errors} />}
                   </Field>
@@ -190,9 +190,9 @@ export function ContactForm({ className, ...props }: React.ComponentProps<"div">
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.value)}
                     aria-invalid={isInvalid}
-                    placeholder="your@email.com"
+                    placeholder="váš@email.com"
                   />
-                  <FieldDescription>We will send our response to this address.</FieldDescription>
+                  <FieldDescription>Pošleme vám naši odpověd na tento email </FieldDescription>
                   {isInvalid && <FieldError errors={field.state.meta.errors} />}
                 </Field>
               );
@@ -215,9 +215,7 @@ export function ContactForm({ className, ...props }: React.ComponentProps<"div">
                     aria-invalid={isInvalid}
                     placeholder="+420 123 456 789"
                   />
-                  <FieldDescription>
-                    Phone number for potential clarification of your inquiry.
-                  </FieldDescription>
+                  <FieldDescription>Telefon pro případné upřesnění vašeho dotazu.</FieldDescription>
                   {isInvalid && <FieldError errors={field.state.meta.errors} />}
                 </Field>
               );
@@ -237,10 +235,10 @@ export function ContactForm({ className, ...props }: React.ComponentProps<"div">
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.value)}
                     aria-invalid={isInvalid}
-                    placeholder="Write your message or inquiry..."
+                    placeholder="Zde napište svou zpávu"
                     rows={4}
                   />
-                  <FieldDescription>Describe how we can help you.</FieldDescription>
+                  <FieldDescription>Popište nám jak vám můžeme pomoc</FieldDescription>
                   {isInvalid && <FieldError errors={field.state.meta.errors} />}
                 </Field>
               );
@@ -306,9 +304,7 @@ export function ContactForm({ className, ...props }: React.ComponentProps<"div">
                 <AlertCircleIcon aria-hidden="true" className="size-4" />
               )}
               <AlertTitle>
-                {submitStatus.type === "success"
-                  ? "Form submitted successfully!"
-                  : "Submission failed"}
+                {submitStatus.type === "success" ? "Formulář odeslán úspěšně" : "Odeslání selhalo"}
               </AlertTitle>
               <AlertDescription>{submitStatus.message}</AlertDescription>
             </Alert>

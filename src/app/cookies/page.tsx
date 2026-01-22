@@ -6,9 +6,9 @@ import { legal } from "@/config/legal";
 import { cookies } from "@/config/cookies";
 import { site } from "@/config/site";
 
-const title = "Cookie Policy";
+const title = "Pravidla pro používání cookies";
 const description =
-  "Learn about how we use cookies on our website, what types of cookies we use, and how you can manage your cookie preferences.";
+  "Informace o tom, jakým způsobem využíváme soubory cookies, o jejich typech a o možnostech nastavení vašich předvoleb.";
 
 export const metadata: Metadata = {
   title,

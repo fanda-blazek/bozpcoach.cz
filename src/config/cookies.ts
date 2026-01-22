@@ -1,74 +1,67 @@
 import type { Cookie } from "@/components/cookies/cookie-policy";
 
 export const cookies: Cookie[] = [
-  // Essential Cookies
   {
     name: "cookie_consent",
     provider: "Own",
-    purpose: "Stores cookie consent preferences.",
-    duration: "1 year",
+    purpose: "Ukládá preference souhlasu s cookies.",
+    duration: "1 rok",
     category: "essential",
     storageType: "cookie",
   },
-
-  // Functional Storage
   {
     name: "theme",
     provider: "Own",
-    purpose: "Stores theme preference (system/light/dark mode).",
-    duration: "Persistent",
+    purpose: "Ukládá preferenci motivu (systémový/světlý/tmavý režim).",
+    duration: "Trvalé",
     category: "functional",
     storageType: "localStorage",
   },
   {
     name: "consent_change_check",
     provider: "Own",
-    purpose: "Tracks consent changes to refresh scripts.",
-    duration: "Session",
+    purpose: "Sleduje změny souhlasu pro aktualizaci skriptů.",
+    duration: "Relace",
     category: "functional",
     storageType: "sessionStorage",
   },
-
-  // Analytics Cookies (Google Analytics - only loaded when analytics consent is given)
   {
     name: "_ga",
     provider: "Google Analytics",
-    purpose: "Distinguishes users for analytics (with consent).",
-    duration: "2 years",
+    purpose: "Rozlišuje uživatele pro účely analýzy (se souhlasem).",
+    duration: "2 roky",
     category: "analytics",
     storageType: "cookie",
   },
   {
     name: "_ga_*",
     provider: "Google Analytics",
-    purpose: "Persists GA4 session state (with consent).",
-    duration: "2 years",
+    purpose: "Uchovává stav relace GA4 (se souhlasem).",
+    duration: "2 roky",
     category: "analytics",
     storageType: "cookie",
   },
   {
     name: "_gid",
     provider: "Google Analytics",
-    purpose: "Distinguishes users for 24 hours (with consent).",
-    duration: "24 hours",
+    purpose: "Rozlišuje uživatele po dobu 24 hodin (se souhlasem).",
+    duration: "24 hodin",
     category: "analytics",
     storageType: "cookie",
   },
   {
     name: "_gat",
     provider: "Google Analytics",
-    purpose: "Throttles GA request rate (with consent).",
-    duration: "1 minute",
+    purpose: "Omezuje četnost požadavků (se souhlasem).",
+    duration: "1 minuta",
     category: "analytics",
     storageType: "cookie",
   },
-
-  // Google Tag Manager Cookies (only loaded when analytics consent is given)
   {
     name: "_gcl_au",
     provider: "Google Tag Manager",
-    purpose: "AdSense efficiency experiments (with consent).",
-    duration: "3 months",
+    purpose: "Experimenty s efektivitou AdSense (se souhlasem).",
+    duration: "3 měsíce",
     category: "analytics",
     storageType: "cookie",
   },

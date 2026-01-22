@@ -82,12 +82,12 @@ export function Footer(props: React.ComponentProps<"footer">) {
 
           <div className="grid gap-y-16 sm:grid-cols-2 md:grid-cols-3 lg:col-span-2">
             <div className="flex flex-col items-start justify-start gap-7">
-              <p className="text-sm font-semibold">Navigation</p>
+              <p className="text-sm font-semibold">Navigace</p>
               <FooterNavigation items={navLinksArray} />
             </div>
 
             <div className="flex flex-col items-start justify-start gap-7">
-              <p className="text-sm font-semibold">Legal</p>
+              <p className="text-sm font-semibold">Právní informace</p>
               <ul className="flex flex-col gap-2">
                 {legalLinksArray.map((item, index) => (
                   <li key={index}>
@@ -101,14 +101,14 @@ export function Footer(props: React.ComponentProps<"footer">) {
                 ))}
                 <li>
                   <CookieSettingsTrigger className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-                    Cookie settings
+                    Nastavení cookies
                   </CookieSettingsTrigger>
                 </li>
               </ul>
             </div>
 
-            <div className="flex flex-col items-start justify-start gap-6">
-              <p className="text-sm font-semibold">Social media</p>
+            <div className="flex flex-col items-start justify-start gap-6 text-start">
+              <p className="text-sm font-semibold">Sociální sítě</p>
               <SocialMediaIcons />
             </div>
           </div>
@@ -139,7 +139,7 @@ function Copyright({
 }) {
   return (
     <p {...props} className={cn("text-text-subtle text-sm", props.className)}>
-      Copyright &copy;&nbsp;{new Date().getFullYear()}&nbsp;{company}. All rights reserved.
+      Copyright &copy;&nbsp;{new Date().getFullYear()}&nbsp;{company}. Všechna práva vyhrazena.
     </p>
   );
 }
@@ -154,7 +154,7 @@ function ScrollToTopButton(props: React.ComponentProps<"button">) {
         props.className
       )}
     >
-      Scroll to top <ArrowUpIcon aria-hidden="true" className="ml-1 inline size-[1em]" />
+      Zpět na začátek <ArrowUpIcon aria-hidden="true" className="ml-1 inline size-[1em]" />
     </button>
   );
 }
@@ -162,7 +162,7 @@ function ScrollToTopButton(props: React.ComponentProps<"button">) {
 function AgencyCredit(props: React.ComponentProps<"p">) {
   return (
     <p {...props} className={cn("text-sm", props.className)}>
-      <span>Created by </span>
+      <span>Vytvořili </span>
       <NavLink
         href="https://www.gtdn.online/"
         className="underline decoration-current/20 decoration-1 underline-offset-2 hover:decoration-current/60"

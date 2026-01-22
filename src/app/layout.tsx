@@ -97,7 +97,7 @@ export default function RootLayout({
           <Toaster />
         </Providers>
 
-        {/* Load scripts that are controlled by our cookie consent settings. */}
+        {/* Load scripts that are controlled by our Nastavení cookies. */}
         <Suspense fallback={null}>
           <ThirdPartyScripts />
         </Suspense>
