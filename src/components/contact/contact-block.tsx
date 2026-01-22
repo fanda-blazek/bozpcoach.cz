@@ -19,13 +19,27 @@ export function ContactBlock(props: React.ComponentProps<"div">) {
               Kontakt
             </h2>
             <div className="text-muted-foreground md:text-base lg:text-lg lg:leading-7">
-              Nečekejte na další úraz. Zavolejte mi nebo napište na nezávaznou konzultaci. Působím
-              po celé ČR (osobně i online).
+              In non libero bibendum odio pellentesque ullamcorper. Aenean condimentum, dolor
+              commodo pulvinar bibendum.
             </div>
           </div>
           <div className="hidden md:block">
             <div className="space-y-16 pb-20 lg:pb-0">
               <div className="space-y-6">
+                <div className="mt-16 flex overflow-hidden">
+                  <Avatar className="size-11">
+                    <AvatarImage src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-1.webp" />
+                    <AvatarFallback>SB</AvatarFallback>
+                  </Avatar>
+                  <Avatar className="-ml-4 size-11">
+                    <AvatarImage src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-3.webp" />
+                    <AvatarFallback>RA</AvatarFallback>
+                  </Avatar>
+                  <Avatar className="-ml-4 size-11">
+                    <AvatarImage src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-2.webp" />
+                    <AvatarFallback>JS</AvatarFallback>
+                  </Avatar>
+                </div>
                 <div className="space-y-4">
                   <p className="text-sm font-semibold">moje kontakntí údaje</p>
 
