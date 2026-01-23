@@ -138,7 +138,7 @@ export function ContactForm({ className, ...props }: React.ComponentProps<"div">
                 const isInvalid = field.state.meta.isTouched && !field.state.meta.isValid;
                 return (
                   <Field data-invalid={isInvalid}>
-                    <FieldLabel htmlFor={`contact-${field.name}`}>Name *</FieldLabel>
+                    <FieldLabel htmlFor={`contact-${field.name}`}>Jméno *</FieldLabel>
                     <Input
                       id={`contact-${field.name}`}
                       name={`contact-${field.name}`}
@@ -159,7 +159,7 @@ export function ContactForm({ className, ...props }: React.ComponentProps<"div">
                 const isInvalid = field.state.meta.isTouched && !field.state.meta.isValid;
                 return (
                   <Field data-invalid={isInvalid}>
-                    <FieldLabel htmlFor={`contact-${field.name}`}>Surname *</FieldLabel>
+                    <FieldLabel htmlFor={`contact-${field.name}`}>Příjmení *</FieldLabel>
                     <Input
                       id={`contact-${field.name}`}
                       name={`contact-${field.name}`}
@@ -181,7 +181,7 @@ export function ContactForm({ className, ...props }: React.ComponentProps<"div">
               const isInvalid = field.state.meta.isTouched && !field.state.meta.isValid;
               return (
                 <Field data-invalid={isInvalid}>
-                  <FieldLabel htmlFor={`contact-${field.name}`}>Email Address *</FieldLabel>
+                  <FieldLabel htmlFor={`contact-${field.name}`}>Emailová adresa *</FieldLabel>
                   <Input
                     id={`contact-${field.name}`}
                     name={`contact-${field.name}`}
@@ -204,7 +204,7 @@ export function ContactForm({ className, ...props }: React.ComponentProps<"div">
               const isInvalid = field.state.meta.isTouched && !field.state.meta.isValid;
               return (
                 <Field data-invalid={isInvalid}>
-                  <FieldLabel htmlFor={`contact-${field.name}`}>Phone Number *</FieldLabel>
+                  <FieldLabel htmlFor={`contact-${field.name}`}>Telefonní číslo *</FieldLabel>
                   <Input
                     id={`contact-${field.name}`}
                     name={`contact-${field.name}`}
@@ -227,7 +227,7 @@ export function ContactForm({ className, ...props }: React.ComponentProps<"div">
               const isInvalid = field.state.meta.isTouched && !field.state.meta.isValid;
               return (
                 <Field data-invalid={isInvalid}>
-                  <FieldLabel htmlFor={`contact-${field.name}`}>Message *</FieldLabel>
+                  <FieldLabel htmlFor={`contact-${field.name}`}>Zpráva *</FieldLabel>
                   <Textarea
                     id={`contact-${field.name}`}
                     name={`contact-${field.name}`}
@@ -260,9 +260,9 @@ export function ContactForm({ className, ...props }: React.ComponentProps<"div">
                   <div className="space-y-1 leading-none">
                     <FieldLabel htmlFor={`contact-${field.name}`}>
                       <span>
-                        I agree to the{" "}
+                        souhlasím se{" "}
                         <Link href={legalLinks.gdpr.href} className="underline hover:no-underline">
-                          processing of personal data
+                          zpracováním osobních dat
                         </Link>{" "}
                         *
                       </span>
@@ -293,7 +293,7 @@ export function ContactForm({ className, ...props }: React.ComponentProps<"div">
 
           <Button type="submit" disabled={isSubmitting} size="lg" className="w-full">
             {isSubmitting && <Spinner />}
-            {isSubmitting ? "Sending..." : "Submit"}
+            {isSubmitting ? "Odesílání..." : "Odeslat"}
           </Button>
 
           {submitStatus.type && (

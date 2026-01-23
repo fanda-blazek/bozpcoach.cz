@@ -16,14 +16,14 @@ import { Separator } from "@/components/ui/separator";
 import { StaticImage } from "@/components/ui/static-image";
 import HeroBgImage from "@/assets/images/hero-bg.webp";
 import PortraitImage from "@/assets/images/2025-11-06-nikca-kancl-145-6.jpg";
-import { ArrowDownIcon, ArrowUpRightIcon } from "lucide-react";
+import { ArrowDownIcon } from "lucide-react";
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 import { AboutBlock } from "@/components/home-page/about-block";
 import { HowItWorksBlock } from "@/components/home-page/how-it-works-block";
 import { HodnoceniRizikCta } from "@/components/home-page/hodnoceni-rizik-cta";
 import { ContactBlock } from "@/components/contact/contact-block";
 import { FaqBlock } from "@/components/faq/faq-block";
+import { BlogBlock } from "@/components/blog/blog-block";
 
 export const metadata: Metadata = {
   title: site.defaultTitle,
@@ -55,9 +55,6 @@ export default function Page() {
         </HeroBackground>
         <HeroContent className="grid gap-16 lg:grid-cols-12">
           <div className="flex-col items-start justify-center lg:col-span-7 2xl:flex">
-            <Badge>
-              Just released v1.0.0 <ArrowUpRightIcon className="size-4" />
-            </Badge>
             <HeroTitle className="text-left xl:text-6xl/[110%]">
               BOZP JINAK: Bezpečnost začíná v hlavě, ne v šanonu.
             </HeroTitle>
@@ -161,6 +158,16 @@ export default function Page() {
         <Container asChild>
           <section>
             <HodnoceniRizikCta />
+          </section>
+        </Container>
+
+        <Container>
+          <Separator />
+        </Container>
+
+        <Container asChild>
+          <section id="blog">
+            <BlogBlock />
           </section>
         </Container>
 

@@ -35,7 +35,7 @@ export function HowItWorksBlock(props: React.ComponentProps<"div">) {
         <div className="lg:sticky lg:top-24 lg:self-start">
           <div className="max-w-lg">
             <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-              Jak to Funguje
+              Jak to celé probíhá?
             </h2>
             <p className="text-muted-foreground mt-12 text-base">
               Seamlessly integrate AI into your workflows. Automate tasks, enhance efficiency, and
