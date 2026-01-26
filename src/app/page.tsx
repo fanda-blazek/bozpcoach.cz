@@ -24,6 +24,7 @@ import { HodnoceniRizikCta } from "@/components/home-page/hodnoceni-rizik-cta";
 import { ContactBlock } from "@/components/contact/contact-block";
 import { FaqBlock } from "@/components/faq/faq-block";
 import { BlogBlock } from "@/components/blog/blog-block";
+import { Review } from "./api/hodnoceni/testimonial24";
 
 export const metadata: Metadata = {
   title: site.defaultTitle,
@@ -178,6 +179,15 @@ export default function Page() {
         <Container asChild>
           <section id="faq">
             <FaqBlock />
+          </section>
+        </Container>
+
+        <Container>
+          <Separator />
+        </Container>
+        <Container asChild>
+          <section id="faq">
+            <Review />
           </section>
         </Container>
       </div>
